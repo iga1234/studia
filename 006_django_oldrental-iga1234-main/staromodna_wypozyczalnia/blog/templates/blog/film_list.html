@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div>
+        {% if user.is_superuser %}
+        <a href="{% url 'film_new' %}" style="color: #00cc88; margin-right: 50px" class="btn btn-default btn-lg pull-right ">Add record
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+        {% endif %}
+    </div>
+    {% for film in object_list %}
+        <div class="post">
+            <dl>
+            <dt></dt><h3><dd>{{ film.title }} </dd></h3>
+            {% if user.is_authenticated %}
+                {% if not film.rent %}
+                <form method="post" action="/rent/{{film.pk}}/film">{% csrf_token %}
+                <button type="submit" class="btn btn-default">Rent</button>
+                {% endif %}
+                {%if film.rent %}
+                    <div><h4>Unavailable</h4></div>
+                {% endif %}
+            {% endif %}
+            {% if user.is_superuser %}
+                <a href="{% url 'film_update' pk=film.pk %}" type="submit" class="btn btn-default">Update</a>
+                <a href="{% url 'film_delete' pk=film.pk %}" type="submit" class="btn btn-default">Delete</a>
+            {% endif %}
+                    <dt>Director</dt><dd>{{ film.director }}</dd>
+                    <dt>Type</dt><dd>{{ film.type }}</dd>
+                    <dt>Time(min)</dt><dd>{{ film.time }}</dd>
+                </form>
+            </dl>
+        </div>
+    {% endfor %}
+{% endblock %}

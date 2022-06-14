@@ -1,0 +1,58 @@
+[
+  {
+    "model": "blog.book",
+    "pk": 1,
+    "fields": {
+      "author": "J.K.Rowling",
+      "title": "Harry Potter and the Philosopher’s Stone",
+      "type": "fantasy",
+      "ISBN": 1234,
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.book",
+    "pk": 2,
+    "fields": {
+      "author": "Antoine de Saint-Exupéry",
+      "title": "Little Prince",
+      "type": "children's literature",
+      "ISBN": 1235,
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.book",
+    "pk": 3,
+    "fields": {
+      "author": "N. Sparks",
+      "title": "The notebook",
+      "type": "romance",
+      "ISBN": 1236,
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.book",
+    "pk": 4,
+    "fields": {
+      "author": "S. Meyer",
+      "title": "Twilight",
+      "type": "fantasy",
+      "ISBN": 1237,
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.book",
+    "pk": 5,
+    "fields": {
+      "author": "G.R.R Martin",
+      "title": "Gra o tron",
+      "type": "fantasy/novel",
+      "ISBN": 1238,
+      "rent": null
+    }
+  }
+
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "model": "blog.CD",
+    "pk": 1,
+    "fields": {
+      "band": "Red Hot Chillis Pepper",
+      "title": "Californication",
+      "type": "funk rock",
+      "tracks": "'Road Trippin', 'Savior', 'Easily', 'Purple Stain'" ,
+      "time": "56:24",
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.CD",
+    "pk": 2,
+    "fields": {
+      "band": "Depeche Mode",
+      "title": "Sounds of the Universe",
+      "type": "synth pop",
+      "tracks": "'Wrong', 'Peace', 'Perfect', 'Little soul', 'Come back'" ,
+      "time": "60:51",
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.CD",
+    "pk": 3,
+    "fields": {
+      "band": "Kwiat Jabłoni",
+      "title": "Mogło być nic",
+      "type": "folk",
+      "tracks": "'Kometa', 'Bankiet', 'Maska', 'Byle jak', 'Nie ma mnie'",
+      "time": "45:58",
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.CD",
+    "pk": 4,
+    "fields": {
+      "band": "Happysad",
+      "title": "Mów mi dobrze",
+      "type": "alternative rock",
+      "tracks": "'Taką wodą być', 'Sami sobie', 'W piwnicy u dziadka', 'Ciało i rozum'",
+      "time": "44:09",
+      "rent": null
+    }
+  },
+  {
+    "model": "blog.CD",
+    "pk": 5,
+    "fields": {
+      "band": "Maroon 5",
+      "title": "Hands all over",
+      "type": "pop",
+      "tracks": "'Misery', 'How', 'Runaway', 'I can't lie', 'Just a feeling'",
+      "time": "40:26",
+      "rent": null
+    }
+  }
+]

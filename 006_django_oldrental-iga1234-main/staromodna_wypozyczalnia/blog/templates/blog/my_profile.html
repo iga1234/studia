@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="post-form" style="color:#00cc88">
+        <h1>My profile-rented objects</h1>
+    </div>
+    <br>
+    <h1>Books</h1>
+    {% for book in books %}
+        {% if book %}
+        <div class="post">
+                <dl>
+                    <dt></dt><h3><dd>{{ book.title }} </dd></h3>
+                    <form method="post" action="/return/{{book.pk}}/book">{% csrf_token %}
+                    <input value="Return" type="submit" class="btn btn-default" />
+                    <dt>Author</dt><dd>{{ book.author }}</dd>
+                    <dt>Type</dt><dd>{{ book.type }}</dd>
+                    <dt>ISBN</dt><dd>{{ book.ISBN }}</dd>
+                    </form>
+                </dl>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <h2>Films</h2>
+    {% for film in films %}
+        <div class="post">
+            <dl>
+             <dt></dt><h3><dd>{{ film.title }} </dd></h3>
+                <form method="post" action="/return/{{film.pk}}/film">{% csrf_token %}
+                <button type="submit" class="btn btn-default">Return</button>
+                <dt>Director</dt><dd>{{ film.director }}</dd>
+                <dt>Type</dt><dd>{{ film.type }}</dd>
+                <dt>Time</dt><dd>{{ film.time }}</dd>
+            </dl>
+        </div>
+    {% endfor %}
+
+    <h2>CDs</h2>
+    {% for cd in cds %}
+         <div class="post">
+            <dl>
+            <dt></dt><h3><dd>{{ cd.title }} </dd></h3>
+                <form method="post" action="/return/{{cd.pk}}/cd">{% csrf_token %}
+                <button type="submit" class="btn btn-default">Return</button>
+                <dt>Band</dt><dd>{{ cd.band }}</dd>
+                <dt>Type</dt><dd>{{ cd.type }}</dd>
+                <dt>Tracks</dt><dd>{{ cd.tracks }}</dd>
+                <dt>Time</dt><dd>{{ cd.time }}</dd>
+            </dl>
+         </div>
+    {% endfor %}
+{% endblock %}
